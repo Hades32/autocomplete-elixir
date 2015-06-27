@@ -18,7 +18,7 @@ exports.init = (pP) ->
 
   array.push(p)
   setting = atom.config.get('autocomplete-elixir.elixirPath')
-  command = path.join ( setting || "") , "elixir"
+  command = setting || "elixir"
   console.log(setting)
 
   ac = new Process({command: command, args: array.reverse(), stderr, exit})
